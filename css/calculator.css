@@ -31,13 +31,14 @@
   display: flex;
   justify-content: flex-end;
 }
-.display_con input {
+.display_con #display {
   background-color: transparent;
   outline: none;
   border: none;
-  flex: 1;
+  display: flex;
+  align-items: center;
   color: var(--text);
-  font-size: 20px;
+  font-size: 25px;
   text-align: right;
   padding: 0px 10px;
 
@@ -62,7 +63,7 @@ button {
     background-color:rgb(76, 108, 110) ;
 }
 #equal{
-    grid-column: span 2;
+    /* grid-column: span 2; */
     background-color: var(--text);
     color: var(--bacground);
 }
