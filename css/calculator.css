@@ -1,0 +1,73 @@
+:root {
+  --bacground: rgb(34, 40, 49);
+  --primary: rgb(49, 54, 63);
+  --sucendry: rgb(118, 171, 174);
+  --text: rgb(238, 238, 238);
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100svh;
+  background-color: var(--bacground);
+  display: grid;
+  place-content: center;
+}
+.form {
+  /* width: 400px; */
+  background-color: var(--primary);
+  display: grid;
+  grid-template-columns: repeat(4, 95px);
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.display_con {
+  grid-column: span 4;
+  height: 50px;
+  background-color: var(--bacground);
+  display: flex;
+  justify-content: flex-end;
+}
+.display_con input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  flex: 1;
+  color: var(--text);
+  font-size: 20px;
+  text-align: right;
+  padding: 0px 10px;
+
+}
+button {
+  height: 95px;
+  background-color: var(--bacground);
+  color: var(--text);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.number:hover {
+  background-color: rgb(19, 23, 28);
+}
+.action {
+  background-color: var(--sucendry);
+  color: var(--bacground);
+}
+.action:hover{
+    background-color:rgb(76, 108, 110) ;
+}
+#equal{
+    grid-column: span 2;
+    background-color: var(--text);
+    color: var(--bacground);
+    
+}
+#equal:hover{
+    background-color: rgb(163, 163, 163);
+}
