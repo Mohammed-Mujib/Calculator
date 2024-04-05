@@ -27,10 +27,12 @@ ele.forEach(function (e) {
       record[-1] = this.dataset.val;
       display_record[-1] = `${this.innerHTML}`;
       display.innerHTML = display_record.join("");
+      console.log("dd");
     } else {
       display_record.push(`${this.innerHTML}`);
       display.innerHTML = display_record.join("");
       record.push(this.dataset.val);
+      console.log("nono");
     }
   });
 });

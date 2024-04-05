@@ -41,6 +41,11 @@
   text-align: right;
   padding: 0px 10px;
 }
+.display_con #display i{
+  font-size: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 button {
   height: 95px;
   background-color: var(--bacground);
