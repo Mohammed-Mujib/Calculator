@@ -23,11 +23,13 @@ result.onclick = function () {
 ele.forEach(function (e) {
   e.addEventListener("click", function () {
     let arr = ["+", "-", "/", "*"];
-    if (arr.includes(`${record.slice(-1,)}`) &&arr.includes(`${this.dataset.val}`) ) {
-      record[-1] = this.dataset.val;
-      display_record[-1] = `${this.innerHTML}`;
+    if (arr.includes(`${record.slice(-1,)}`) && arr.includes(`${this.dataset.val}`) ) {
+      display_record.pop();
       display.innerHTML = display_record.join("");
-      console.log("dd");
+      record.pop();
+      display_record.push(`${this.innerHTML}`);
+      display.innerHTML = display_record.join("");
+      record.push(this.dataset.val);
     } else {
       display_record.push(`${this.innerHTML}`);
       display.innerHTML = display_record.join("");
@@ -40,5 +42,4 @@ del.onclick = function () {
   display_record.pop();
   display.innerHTML = display_record.join("");
   record.pop();
-  console.log(record);
 };
