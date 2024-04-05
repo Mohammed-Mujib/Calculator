@@ -6,6 +6,7 @@ let del = document.getElementById("delete");
 let display_record = [];
 let record = [];
 let result = document.getElementById("equal");
+let arr = ["+", "-", "/", "*"];
 clear.onclick = function () {
   display.innerHTML = null;
   display_record = [];
@@ -14,7 +15,11 @@ clear.onclick = function () {
 result.onclick = function () {
   if (record.length < 1) {
     display.innerHTML = "0";
-  } else {
+  }
+   else {
+    if(arr.includes(`${record.slice(-1,)}`) ){
+      record.pop();
+    }
     display.innerHTML = eval(record.join(""));
     display_record = [`${display.innerHTML}`];
     record = [display.innerHTML]
@@ -22,7 +27,6 @@ result.onclick = function () {
 };
 ele.forEach(function (e) {
   e.addEventListener("click", function () {
-    let arr = ["+", "-", "/", "*"];
     if (arr.includes(`${record.slice(-1,)}`) && arr.includes(`${this.dataset.val}`) ) {
       display_record.pop();
       display.innerHTML = display_record.join("");
