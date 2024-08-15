@@ -1,12 +1,24 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* :root {
   --bacground: rgb(34, 40, 49);
   --primary: rgb(49, 54, 63);
   --sucendry: rgb(118, 171, 174);
   --text: rgb(238, 238, 238);
+} */
+:root {
+  --bacground: hsl(29, 60%, 93%);
+  --bacground_hover :hsl(29, 60%, 85%);
+  --primary: hsl(24, 30%, 74%);
+  --primary_hover: hsl(24, 30%, 68%);
+  --sucendry: hsl(34, 30%, 82%);
+  --sucendry_hover: hsl(34, 30%, 95%);
+  --text: hsl(11, 47%, 57%);
+  --text_hover: hsl(11, 47%, 45%);
 }
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family:"Inter", sans-serif;;
 }
 .container {
   width: 100%;
@@ -22,6 +34,7 @@
   justify-content: center;
   gap: 10px;
   padding: 10px;
+  border-radius: 5px;
 }
 .display_con {
   grid-column: span 4;
@@ -54,22 +67,27 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 2px;
+  font-size: 25px;
 }
 .number:hover {
-  background-color: rgb(19, 23, 28);
+  /* background-color: rgb(19, 23, 28); */
+  background-color: var(--bacground_hover);
 }
 .action {
   background-color: var(--sucendry);
-  color: var(--bacground);
+  color: var(--text);
+  /* color: var(--bacground); */
   font-size: 20px;
 }
 .action:hover{
-    background-color:rgb(76, 108, 110) ;
+    /* background-color:rgb(76, 108, 110) ; */
+    background-color:var(--sucendry_hover) ;
 }
 #equal{
     background-color: var(--text);
     color: var(--bacground);
 }
 #equal:hover{
-    background-color: rgb(163, 163, 163);
+    /* background-color: rgb(163, 163, 163); */
+    background-color: var(--text_hover);
 }
